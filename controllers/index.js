@@ -1,9 +1,7 @@
-displayJoke = (req, res) => {
-    const data = 
-    'How did the telephone propose...give a ring.';
-    res.status(200).send(data);
+const awesomeFunction = (req, res, next) => {
+    res.json('Awesome person');
 };
 
 module.exports = {
-    displayJoke,
+    awesomeFunction
 };
