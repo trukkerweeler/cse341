@@ -1,7 +1,9 @@
 use('testdb')
 // db.users.insertOne({'fname': 'Steve', 'lname': 'Lukather'})
-db.users.insertOne({'fname': 'David', 'lname': 'Paich'})
-db.users.find()
+db.contacts.insertMany([{'firstName': 'David', 'lastName': 'Paich', 'email': 'africa@email.com', 'favoriteColor': 'moonlit', 'birthday': new Date('2023-01-01T08:00:00Z')},
+{'firstName': 'Steve', 'lastName': 'Lukather', 'email': '99@email.com', 'favoriteColor': 'rose', 'birthday': new Date('2023-02-14T08:00:00Z')},
+{'firstName': 'Bobby', 'lastName': 'Kimball', 'email': 'stache@email.com', 'favoriteColor': 'white', 'birthday': new Date('2023-03-17T08:00:00Z')}])
+// db.users.find()
 
 
 // /* global use, db */
