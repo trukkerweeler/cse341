@@ -1,6 +1,10 @@
 const { ObjectId } = require('mongodb');
 const mongodb = require('../db/connect');
 
+// const root = (req, res) =>{
+  
+// }
+
 const getAll = async (req, res) => {
   const result = await mongodb.getDb().db('testdb').collection('contacts').find();
   result.toArray().then((lists) => {
@@ -9,7 +13,7 @@ const getAll = async (req, res) => {
   });
 };
 
-const getOne = async (req, res, next) => {
+const getOne = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db('testdb').collection('contacts').find({ _id: userId });
   result.toArray().then((lists) => {

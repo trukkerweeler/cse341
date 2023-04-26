@@ -33,6 +33,10 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/contacts/6447d6f8c133a95b73dd531b
 
+
+
+
+
 // ================Production deployment=======================================
 ###
 GET https://web-service-341.onrender.com/contacts
@@ -59,13 +63,13 @@ Content-Type: application/json
 {
     "firstName":"David",
     "lastName":"Paich",
-    "email":"hurryboy@email.om",
-    "favoriteColor":"tambu",
+    "email":"tambu@email.om",
+    "favoriteColor":"moonlit",
     "birthday":"2023-01-01T08:00:00.000Z"
 }
 
 ###
-DELETE https://web-service-341.onrender.com/contacts/6447d6f8c133a95b73dd531b
+DELETE https://web-service-341.onrender.com/contacts/644801aabc59f149bcf0eac5
 
 
 
