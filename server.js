@@ -12,7 +12,8 @@ const contactRoutes = require("./routes/contacts");
 app
   .use(bodyParser.json())
   .use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    // res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Content-Type: text/html; charset=utf-8");
     next();
   })
   .use("/contacts", contactRoutes)
