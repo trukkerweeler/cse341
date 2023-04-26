@@ -6,8 +6,8 @@ const port = process.env.PORT || 3000;
 const contactRoutes = require("./routes/contacts");
 
 
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerDocument = require('./swagger.json');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 app
   .use(bodyParser.json())
@@ -18,7 +18,7 @@ app
   })
   .use("/contacts", contactRoutes)
   .use('/', require('./routes'))
-  // .use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
   .get("/", (req, res) => {
     res.send("api assignment");
