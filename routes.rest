@@ -10,25 +10,34 @@ GET http://localhost:3000/contacts/6441ab0b150aebeb71bf4032
 POST http://localhost:3000/contacts HTTP/1.1
 Content-Type: application/json
 
+# {
+#     "firstName":"Jeff",
+#     "lastName":"Porcaro",
+#     "email":"skins@email.om",
+#     "favoriteColor":"cocoa",
+#     "birthday": "2023-07-04"
+# }
 {
-    "firstName":"Jeff",
+    "firstName":"Mike",
     "lastName":"Porcaro",
-    "email":"skins@email.om",
-    "favoriteColor":"cocoa",
-    "birthday": "2023-07-04"
+    "email":"stringsoffour@email.com",
+    "favoriteColor":"brown",
+    "birthday":"2023-12-25T08:00:00.000Z"
 }
 
 ### PUT contact
 PUT http://localhost:3000/contacts/6441ab0b150aebeb71bf4032
 Content-Type: application/json
 
-{
-    "firstName":"David",
-    "lastName":"Paich",
-    "email":"hurryboy@email.om",
-    "favoriteColor":"tambu",
-    "birthday":"2023-01-01T08:00:00.000Z"
-}
+# {
+#     "firstName":"David",
+#     "lastName":"Paich",
+#     "email":"hurryboy@email.com",
+#     "favoriteColor":"tambu",
+#     "birthday":"2023-01-01T08:00:00.000Z"
+# }
+
+
 
 ###
 DELETE http://localhost:3000/contacts/6447d6f8c133a95b73dd531b
