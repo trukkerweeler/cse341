@@ -1,5 +1,5 @@
 {
-  "name": "REST API",
+  "name": "rest-api",
   "version": "1.0.0",
   "description": "cse341",
   "main": "server.js",
@@ -41,6 +41,6 @@
   },
   "homepage": "https://github.com/trukkerweeler/cse341#readme",
   "keywords": [
-    "lesson02"
+    "lesson04"
   ]
 }
