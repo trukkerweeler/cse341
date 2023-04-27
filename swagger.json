@@ -8,7 +8,7 @@
   "host": "https://web-service-341.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
