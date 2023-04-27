@@ -1,3 +1,4 @@
+const cors = require('cors');
 const express = require("express");
 const app = express();
 const mongodb = require("./db/connect");
@@ -19,6 +20,7 @@ app
   .use("/contacts", contactRoutes)
   .use('/', require('./routes'))
   .use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+  .use(cors())
 
   .get("/", (req, res) => {
     res.send("api assignment");
