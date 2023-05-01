@@ -5,7 +5,7 @@ const doc = {
         title: 'Swaggy API',
         description: 'Project 2 API',
     },
-    host: 'https://web-service-341.onrender.com',
+    host: 'https://web-service-341-project2.onrender.com',
     schemes: ['http'],
 };
 
