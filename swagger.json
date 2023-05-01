@@ -2,13 +2,13 @@
   "swagger": "2.0",
   "info": {
     "title": "Swaggy API",
-    "description": "Contacts project API",
+    "description": "Project 2 API",
     "version": "1.0.0"
   },
-  "host": "web-service-341.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
     "/api-docs": {
@@ -28,6 +28,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -86,6 +89,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -134,6 +140,90 @@
       },
       "delete": {
         "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/corrective/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "corrective_id": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "subject": {
+                  "example": "any"
+                },
+                "assigned_to": {
+                  "example": "any"
+                },
+                "closed": {
+                  "example": "any"
+                },
+                "created_date": {
+                  "example": "any"
+                },
+                "closed_date": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/corrective/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",

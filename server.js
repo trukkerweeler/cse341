@@ -5,6 +5,7 @@ const mongodb = require("./db/connect");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
 const contactRoutes = require("./routes/contacts");
+const correctiveRoutes = require("./routes/corrective");
 
 
 const swaggerUi = require('swagger-ui-express');
@@ -17,6 +18,7 @@ app
     next();
   })
   .use("/contacts", contactRoutes)
+  .use("/corrective", correctiveRoutes)
   .use('/', require('./routes'))
   .use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
   .use(cors())
